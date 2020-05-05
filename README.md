@@ -10,7 +10,7 @@ A simple phone book application using Angular 9 for front end and .net core 3.1 
 ## Database 
 <i>Before running this Project</i>
 1.	Run the CreateDatabase.sql script
-2.	Edit the application.json connection string to point to the database.
+2.	Edit the appsettings.json connection string to point to the database.
 
 ## Back End Application
 <i>Before running this Project</i>
