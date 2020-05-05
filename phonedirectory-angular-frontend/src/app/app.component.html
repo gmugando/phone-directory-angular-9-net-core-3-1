@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="jumbtron">
+    <h1 class="display-4 text-center">Phonebook Manager</h1>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Welcome!</h4>
+      <p>
+        Please use the form on the left to add phonebooks or entry then click
+        submit. Use view Entries to see add/view entries.
+      </p>
+      <hr />
+      <p class="mb-0">
+        Back to phonebooks
+        <a class="alert-link" [routerLink]="'/phonebooks'">Click Here</a>
+      </p>
+    </div>
+    <hr />
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<h4>Phonebook List</h4>
+<table class="table table-hover">
+  <tr *ngFor="let phone of service.list">
+    <td (click)="populateForm(phone)">{{ phone.PhoneBookName }}</td>
+    <td class="text-right"></td>
+    <td class="text-right">
+      <button (click)="populateForm(phone)" class="btn btn-sm btn-outline-info">
+        Edit</button
+      >&nbsp;
+      <button
+        (click)="onDelete(phone.PhoneBookId)"
+        class="btn btn-sm btn-outline-danger"
+      >
+        Delete
+      </button>
+      &nbsp;
+      <a
+        [routerLink]="['/entries', phone.PhoneBookId]"
+        class="btn btn-sm btn-outline-primary"
+        role="button"
+        >View Entries</a
+      >
+    </td>
+  </tr>
+</table>

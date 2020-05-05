@@ -1,0 +1,46 @@
+<!-- <h4>Entry Form</h4> -->
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <input
+    type="hidden"
+    name="EntryId"
+    #EntryId="ngModel"
+    [(ngModel)]="service.formData.EntryId"
+  />
+  <input
+    type="hidden"
+    name="PhoneBookId"
+    #PhoneBookId="ngModel"
+    [(ngModel)]="service.formData.PhoneBookId"
+  />
+  <div class="form-group">
+    <label>Name</label>
+    <input
+      name="Name"
+      #Name="ngModel"
+      [(ngModel)]="service.formData.Name"
+      class="form-control"
+      required
+    />
+    <div class="validation-error" *ngIf="Name.invalid && Name.touched">
+      This field is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input
+      name="PhoneNumber"
+      #PhoneNumber="ngModel"
+      [(ngModel)]="service.formData.PhoneNumber"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group">
+    <button
+      type="submit"
+      [disabled]="form.invalid"
+      class="btn btn-lg btn-block"
+    >
+      SUBMIT
+    </button>
+  </div>
+</form>

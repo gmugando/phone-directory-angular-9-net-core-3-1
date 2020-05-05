@@ -1,0 +1,19 @@
+<h4>Search</h4>
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <div class="row">
+    <div class="col-10">
+      <input
+        name="Name"
+        #Name="ngModel"
+        [(ngModel)]="formData.Name"
+        class="form-control"
+      />
+    </div>
+    <div class="col-2">
+      <button type="submit" class="btn btn-secondary">
+        Search
+      </button>
+    </div>
+  </div>
+</form>
+<p></p>

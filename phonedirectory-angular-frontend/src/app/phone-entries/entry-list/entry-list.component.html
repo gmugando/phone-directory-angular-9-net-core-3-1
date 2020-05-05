@@ -1,0 +1,18 @@
+<h4>Entry List</h4>
+<table class="table table-hover">
+  <tr *ngFor="let entry of service.list">
+    <td (click)="populateForm(entry)">{{ entry.Name }}</td>
+    <td (click)="populateForm(entry)">{{ entry.PhoneNumber }}</td>
+    <td class="text-right">
+      <button (click)="populateForm(entry)" class="btn btn-sm btn-outline-info">
+        Edit</button
+      >&nbsp;
+      <button
+        (click)="onDelete(entry.EntryId)"
+        class="btn btn-sm btn-outline-danger"
+      >
+        Delete
+      </button>
+    </td>
+  </tr>
+</table>
