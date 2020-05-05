@@ -13,25 +13,15 @@ namespace PhoneDirectory.Data.Services
     {
         private readonly IPhoneBookRepository _phonebookRepository;
         private readonly IUnitOfWork _unitOfWork;
-        //private readonly IMemoryCache _cache;
 
         public PhoneBookService(IPhoneBookRepository phonebookRepository, IUnitOfWork unitOfWork)
         {
             _phonebookRepository = phonebookRepository;
             _unitOfWork = unitOfWork;
-            //_cache = cache;
         }
 
         public async Task<IEnumerable<PhoneBook>> ListAsync()
         {
-            // Here I try to get the categories list from the memory cache. If there is no data in cache, the anonymous method will be
-            // called, setting the cache to expire one minute ahead and returning the Task that lists the categories from the repository.
-            //var categories = await _cache.GetOrCreateAsync(CacheKeys.CategoriesList, (entry) => {
-            //    entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(1);
-               
-            //});
-
-            //return categories;
             return await _phonebookRepository.ListAsync();
         }
 

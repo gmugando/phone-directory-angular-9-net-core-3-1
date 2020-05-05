@@ -29,16 +29,12 @@ namespace PhoneDirectory.Data.Persistence.Repositories
 			if (query.EntryName != null)
 				queryable = queryable.Where(p => p.Name.Contains(query.EntryName));
 
-			// Here I count all items present in the database for the given query, to return as part of the pagination data.
 			int totalItems = await queryable.CountAsync();
 
-			// Here I apply a simple calculation to skip a given number of items, according to the current page and amount of items per page,
-			// and them I return only the amount of desired items. The methods "Skip" and "Take" do the trick here.
 			List<Entry> entries = await queryable.Skip((query.Page - 1) * query.ItemsPerPage)
 													.Take(query.ItemsPerPage)
 													.ToListAsync();
 
-			// Finally I return a query result, containing all items and the amount of items in the database (necessary for client-side calculations ).
 			return new QueryResult<Entry>
 			{
 				Items = entries,
