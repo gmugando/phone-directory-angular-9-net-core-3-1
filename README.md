@@ -21,6 +21,8 @@ A simple phone book application using Angular 9 for front end and .net core 3.1 
 ## The Application
 The applications allows to maintain “phonebooks” and their entries. To begin create a PhoneBook enter the name of the Phonebook and click Submit. To manage Entries for this phonebook click View Entries
 
-### image
+![](images/phonebook.png)
+
 To add an entry the person name and number the click submit. To search enter a part of the person’s name and click search.
-### image
+
+![](images/phoneentry.png)
