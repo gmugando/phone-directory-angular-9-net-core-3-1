@@ -2,6 +2,13 @@
 
 A simple phone book application using Angular 9 for front end and .net core 3.1 web api for backend.
 
+## To Do
+<i>Things am still gonna add</i>
+1. Logging
+2. Swagger
+3. OAuth2 security for the Web API
+4. Feel free to send a pull request
+
 ## Front End Application
 <i>Before running this Project</i>
 1.	Install npm packages using 'npm install' command from Angular folder.
